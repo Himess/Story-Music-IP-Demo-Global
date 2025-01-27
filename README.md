@@ -8,6 +8,7 @@ This guide is designed to help you register your music as IP (Intellectual Prope
 We recommend using a new, empty Metamask test wallet for this project.
 
 1- Create your wallet.
+
 2- Click on the three dots in the top-right corner and select Account Details.
 
 
@@ -29,6 +30,7 @@ Once ready, you can proceed with the setup.
 ## 1. Create a Project Folder
 
 Create a folder on your computer. For example: `StoryProject` .
+
 This folder will contain all your files and code.
 
 ![image](https://github.com/user-attachments/assets/cc275a3e-386f-4832-8ba8-9281ee12be42)
@@ -37,24 +39,26 @@ This folder will contain all your files and code.
 
 ## 2. Install Visual Studio Code (VS Code)
 
-[VS Code](https://code.visualstudio.com/) 
 
-Download VS Code https://code.visualstudio.com/ for your operating system.
+Download VS Code [VS Code](https://code.visualstudio.com/)  for your operating system.
 
 1.Run the downloaded .exe file.
+
 2.Accept the license agreement and click Next.
+
 3.Choose an installation location (default is fine) and click Next.
+
 4.Check the box for Add to PATH. This allows you to run VS Code from the terminal.
+
 5.Click Install and wait for the installation to complete.
+
 Congratulations, the installation is complete!
 
 ---
 
 ## 3. Install Required Tools
 
-Story ile çalışmaya başlamak için aşağıdaki araçları bilgisayarınıza kurmanız gerekiyor:
-
-### Node.js ve npm Kurulumu
+To get started with Story, you need to install the following tools on your computer:
 
 
 Installing Node.js and npm
@@ -104,6 +108,7 @@ If you see the versions displayed as below, the installation was successful:
 Suno is an AI-powered platform that allows you to create music by entering a few descriptive words. We’ll use this platform for our project.
 
 1.Visit https://suno.com/create?wid=default and create an account.
+
 2.In the Song Description field, write what kind of music you want.
 Examples:
 
@@ -114,9 +119,11 @@ Examples:
 <img width="553" alt="SUNO" src="https://github.com/user-attachments/assets/723783a3-6173-4a06-8ba3-d486a80aa65b" />
 
 For example, I created music inspired by the "lazy and sleepy nature of Celestine Sloths."
+
 I loved the result! 😊 I recommend listening to it at the end of this guide.
 
 3.After entering your prompt, click Create.
+
 4.Once your music is generated, click on it.
 
 <img width="992" alt="Celestine Sloth's Lullaby" src="https://github.com/user-attachments/assets/15b85ee6-c42b-47d8-bd18-e4a350687919" />
@@ -130,7 +137,7 @@ The CID in the link is important. In the example above:
 
 6.Use this CID to construct the final music URL like this:
 
-Bu verdiği CID ‘ yi şu şekilde yazacağız. Örnek bu şekilde olmalı.
+We will write the given CID in the following format. It should look like this:
 
 
 `https://cdn1.suno.ai/eb448e54-4b1b-4558-966c-95dfb31b6b3d.mp3`
@@ -144,6 +151,7 @@ Make sure to save this URL carefully, as we’ll use it later.
 This step is quite simple.
 
 1.Go back to Pinata at https://app.pinata.cloud/ipfs/files.
+
 2.Click +Add and then File Upload.
 
 
@@ -194,6 +202,7 @@ Create a `.env` file in your project directory to store sensitive information li
 Steps:
 
 1.In VS Code, right-click in the project folder and select New File.
+
 2.Name the file `.env` and press Enter.
 
 The file should look like this:
@@ -271,6 +280,7 @@ NFT_CONTRACT_ADDRESS=0x041B4F29183317Fd352AE57e331154b73F8a1D73
 ## 12. Install Required Packages
 
 Run the following command in your terminal to install the necessary dependencies for the project:
+
 ```bash
 npm install @story-protocol/core-sdk pinata-web3 viem
 ```
@@ -291,6 +301,7 @@ In this step, we will configure some basic files required to use the Story SDK a
 This file will be used to configure the Story SDK (`config`) and initialize the client (`client`).
 
 1.Create a file named `utils.ts` in the root directory of your project.
+
 2.Paste the following code into the file:
 
 ```typescript
@@ -328,6 +339,7 @@ The result should look like this:
 Note: We'll make some changes here to create IP and NFT metadata.
 
 1.Create a file named `main.ts` in the root directory of your project.
+
 2.Paste the following code into the file:
 
 ```typescript
@@ -454,6 +466,7 @@ main().catch((error) => {
 ```
 
 Replace the Links
+
 In the above `main.ts`, replace the following links with your custom ones:
 
 1.Replace the `watermarkImg` link:
@@ -520,6 +533,7 @@ The result should look like this:
 ---
 
 ## 14. Define the Mint Function
+
 In the project root, create a file named `mintNFT.ts` and add the following code:
 
 ```typescript
